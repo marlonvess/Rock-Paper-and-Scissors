@@ -1,25 +1,24 @@
+let choices=['rock','paper','scissors'];
 
-const playerSelection = 0;
-const computerSelection = Math.floor(Math.random() * 3); 
 
-//0-Rock 1-Paper 2-Scissor 
-function playRound() {
-    if (playerSelection == computerSelection) {
-        console.log("Tie!");
+function playGame(playerChoice) {
+    
+    let cpuChoices=choices[Math.floor(Math.random()*3)]
+
+    if (playerChoice==cpuChoices) {
+        console.log("Tie");
+    } 
+    else if (playerChoice=='rock' && cpuChoices=='scissors' || 
+             playerChoice=='paper' && cpuChoices=='rock' ||
+             playerChoice=='scissors' && cpuChoices=='paper'   
+                                        )                      
+                                    {
+        console.log("You win");
     }
-    else if (playerSelection == 0 && computerSelection ==2 || playerSelection == 1 && computerSelection == 0 || playerSelection == 2 && computerSelection == 1){
-        console.log ("You Win!");
-    }
-
     else {
-        console.log ("You Lose!")
+        console.log ("You lose!");
     }
+    console.log (choices)
+    console.log (playerChoice);
+    console.log (cpuChoices);
 }
-
-
-
-console.log (computerSelection)
- console.log (playRound());
-
-
-//| 
