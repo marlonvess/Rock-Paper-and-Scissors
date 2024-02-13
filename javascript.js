@@ -28,10 +28,22 @@ function playGame(playerChoice) {
         document.getElementById("result").innerHTML="You Lose!";
         computerPoints++;
     }
+   
+        if (playerPoints>=5) {
+            document.getElementById("result").innerHTML="Computer was defeated!";
+             computerPoints=0;
+             playerPoints=0;
+        }
     
-    document.getElementById("playerPoints").innerHTML="Player Points:"+playerPoints;
-    document.getElementById("computerPoints").innerHTML="Computer Points:"+computerPoints;
-    
+        if (computerPoints>=5)
+        {
+            document.getElementById("result").innerHTML="You was defeated!";
+            playerPoints=0;
+            computerPoints=0;     
+        }
+    //Game score
+    document.getElementById("playerPoints").innerHTML="Player Points: "+playerPoints;
+    document.getElementById("computerPoints").innerHTML="Computer Points: "+computerPoints;
 }
 
 
