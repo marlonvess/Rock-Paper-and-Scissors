@@ -37,7 +37,7 @@ function playGame(playerChoice) {
     
         if (computerPoints>=5)
         {
-            document.getElementById("result").innerHTML="You was defeated!";
+            document.getElementById("result").innerHTML="You were defeated!";
             playerPoints=0;
             computerPoints=0;     
         }
